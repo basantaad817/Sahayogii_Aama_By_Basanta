@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sahayogi aama</title>
+  <link rel="stylesheet" th:href="@{~/css/style.css}">
+</head>
+<body>
+<div th:replace="Frag/UserFrag.html :: Userfrag"></div>
+
+<div class="container-div-prt">
+  <div class="prt st">
+    <img th:src="@{~/image/home-image.gif}" draggable="false" alt="">
+  </div>
+  <div class="prt sd">
+    <div class="ris">
+      <h1>
+        <span>Find </span><br> आमा <br> for your <br> child
+      </h1>
+      <button  onclick="location.href='#about'" class="btn"><img class="icon2" src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/icon2.png" alt=""> what's that</button>
+    </div>
+  </div>
+</div>
+
+<!-- sections -->
+<section class="about" id="about" >
+  <div class="div fir">
+    <h2>We provide caretaker for your child</h2>
+    <p>
+      Sahayogii आमा is a one-of-a-kind platform connecting new mothers in Nepal with experienced caretakers, providing them with the support and care they need for their
+      babies, and enabling them to focus on their recovery and bond with their newborns.
+    </p>
+    <button class="btn" th:onclick="| window.location.href='/user/aboutus'+ |">
+      <img src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/icon1.png" class="icon1" alt="">
+      See About Us
+    </button>
+  </div>
+  <div class="div howitworks">
+    <img th:src="@{~/image/care.png}" draggable="false" alt="">
+  </div>
+</section>
+
+
+
+
+
+<section class="why">
+  <div class="container-div-why">
+    <div class="dr">
+      <div class="tw">
+        <h3>Why Sahayogi आमा?</h3>
+        <p>
+          Sahayogii आमा provides a solution to the problems new mothers face by connecting them with experienced caretakers,
+          or "आमा," who offer both care and love to babies.
+          Our system is specially designed to help new mothers recover and bond with their babies,
+          while also taking care of household activities. With our carefully screened and qualified caretakers,
+          we provide a safe and reliable platform for new mothers in Nepal.
+        </p>
+        <button class="btn">
+          <img src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/icon2.png" class="icon2" alt="">
+          Check our Features
+        </button>
+      </div>
+    </div>
+    <div class="dr">
+      <figure class="tw">
+        <img th:src="@{~/image/graphicsss.png}" draggable="false" alt="">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!--  <section class="cover">-->
+<!--    <div>-->
+<!--      <img title="Play" src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/play.png" alt="">-->
+<!--      <h4>Check available works</h4>-->
+<!--    </div>-->
+<!--  </section>-->
+
+
+
+
+<section class="work">
+  <span>get started now</span>
+
+  <section id="available-aama">
+    <div class="individual-aama" th:each="aama:${aamaList}">
+      <img th:src="'data:image/png;base64,'+${aama.imageBase64}" width="200" height="300"/>
+      <h3 th:text="${aama.firstname}"></h3>
+      <!--          <button class="btn" th:onclick="| window.location.href='/user/aamaprofile'+ |"><img src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/icon1.png" class="icon1" alt=""> Browse</button>-->
+      <button class="btn"><a th:href="@{~/user/aamaprofile/}+${aama.id}" >Browse</a> </button>
+
+    </div>
+
+    <!--        <div class="individual-aama">-->
+    <!--          <img src="https://images.unsplash.com/photo-1533128361669-69c065857a13?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=436&q=80" alt="">-->
+    <!--          <h3>आमाको नाम</h3>-->
+    <!--          <button class="btn" th:onclick="| window.location.href='/user/aamaprofile' |"><img src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/icon1.png" class="icon1" alt=""> Browse</button>-->
+    <!--      -->
+    <!--        </div>-->
+
+    <!--        <div class="individual-aama">-->
+    <!--          <img src="https://images.unsplash.com/photo-1533128361669-69c065857a13?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=436&q=80" alt="">-->
+    <!--          <h3>आमाको नाम</h3>-->
+    <!--          <button class="btn" th:onclick="| window.location.href='/user/aamaprofile' |"><img src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/icon1.png" class="icon1" alt=""> Browse</button>-->
+    <!--      -->
+    <!--        </div>-->
+    <!--        <div class="individual-aama">-->
+    <!--          <img src="https://images.unsplash.com/photo-1533128361669-69c065857a13?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=436&q=80" alt="">-->
+    <!--          <h3>आमाको नाम</h3>-->
+    <!--          <button class="btn" th:onclick="| window.location.href='/user/aamaprofile' |"><img src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/icon1.png" class="icon1" alt=""> Browse</button>-->
+    <!--      -->
+    <!--        </div>-->
+
+  </section>
+
+
+
+</section>
+
+<footer>
+  <div class="ftr-container">
+    <div class="fdb">
+      <img class="logo" th:src="@{~/image/logo_footer.png}" alt="">
+      <div>
+        <img src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/dribbble.png" alt="">
+        <img src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/Instagram.png" alt="">
+        <img src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/Twitter.png" alt="">
+      </div>
+    </div>
+
+    <div>
+      <h2>Office Location</h2>
+      <h5>Purano Baneshwor</h5>
+    </div>
+
+    <div>
+      <h2>Call on</h2>
+      <h5>+977 9841123253</h5>
+    </div>
+
+    <div>
+      <h2>Email at</h2>
+      <h5>info.sahayogiaama.com</h5>
+    </div>
+  </div>
+</footer>
+</body>
+<script th:src="@{~/js/script.js}"></script>
+</html>

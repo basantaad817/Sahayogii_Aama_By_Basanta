@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+  <link rel="stylesheet" th:href="@{~/css/about.css}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" th:href="@{~/css/style.css}">
+</head>
+<body>
+<div th:replace="Frag/UserFrag.html :: Userfrag"></div>
+<section class="about-section">
+  <div class="">
+    <div class="row no-gutters ">
+      <div class="left-header d-none d-lg-block col-lg-3 col-xl-4">
+        <div class="v-center-box d-flex align-items-end text-uppercase">
+          <h2 class="mb-0">About US</h2>
+        </div>
+      </div>
+      <div class="col-lg-9 col-xl-8">
+        <div class="main-content p-5">
+          <div class="main-header mb-4">
+            <h1 class="main-heading d-inline-block text-uppercase pb-3 border-bottom">About US</h1>
+          </div>
+
+          <div class="row mb-5">
+            <div class="mb-5 mb-sm-4 col-md-4">
+              <img src="https://images.unsplash.com/photo-1607454230973-e19abb3fa2bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fGluZGlhbiUyMHBhcmVudHMlMjBhbmQlMjBjaGlsZHJlbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Colorful Wall">
+            </div>
+            <div class="col-md-8">
+              <div class="about__text mb-5 mb-sm-4 mb-md-4">
+                <h3>Sahayogii आमा</h3>
+                <p class="m-0">Welcome to Sahayogii आमा, the website dedicated to helping new mothers find the support they need. We understand that being a new mom can be overwhelming, which is why we have created a platform that connects you with experienced caretakers who can help you take care of your baby and do other household activities.</p>
+              </div>
+              <div class="about__skills">
+                <div class="row no-gutters mb-0 mb-sm-4">
+                  <div class="mb-4 mb-sm-0 pr-sm-3 col-sm-6">
+                    <div class="media">
+                      <i class="fa-solid fa-shield icon-18 mr-3"></i>
+                      <div class="media-body">
+                        <h4 class="m-0">Safe and secure</h4>
+                        <p class="m-0"> Protecting your privacy and safety is our top priority.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-4 mb-sm-0 pl-sm-3 col-sm-6 ">
+                    <div class="media">
+                      <i class="fa-solid fa-universal-access icon-18 mr-3"></i>
+                      <div class="media-body">
+                        <h4 class="m-0">Quality caregivers</h4>
+                        <p class="m-0">Caregivers are carefully screened and trained.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row no-gutters mb-0 mb-sm-4">
+                  <div class="mb-4 mb-sm-0 pr-sm-3 col-sm-6">
+                    <div class="media">
+                      <i class="fa-solid fa-hands-holding-child icon-18 mr-3"></i>
+                      <div class="media-body">
+                        <h4 class="m-0">Affordable rates</h4>
+                        <p class="m-0">Cost-effective pricing plans for everyone.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-0 pl-sm-3 col-sm-6">
+                    <div class="media">
+                      <i class="fa-solid fa-person-circle-check icon-18 mr-3"></i>
+                      <div class="media-body">
+                        <h4 class="m-0">Flexibility</h4>
+                        <p class="m-0">Book care on your schedule.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-data">
+            <div class="row no-gutters pt-5 border-top">
+              <div class="mb-4 mb-md-0 pr-sm-3 p-md-0 col-sm-6 col-md-3">
+                <div class="media">
+                  <i class="fa-solid fa-person-dress icon-18 mr-2"></i>
+                  <div class="media-body">
+                    <p class="data-number m-0 font-weight-bold">15+</p>
+                    <p class="m-0 text-uppercase">Caretakers</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-4 mb-md-0 pl-sm-3 p-md-0 col-sm-6 col-md-3">
+                <div class="media">
+                  <i class="fa-solid fa-house icon-18 mr-2"></i>
+                  <div class="media-body">
+                    <p class="data-number m-0 font-weight-bold">10+</p>
+                    <p class="m-0 text-uppercase">Houses Served</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-4 mb-md-0 pr-sm-3 p-md-0 col-sm-6 col-md-3">
+                <div class="media">
+                  <i class="fa-solid fa-money-check icon-18 mr-2"></i>
+                  <div class="media-body">
+                    <p class="data-number m-0 font-weight-bold">8+</p>
+                    <p class="m-0 text-uppercase">Completed Transactions</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-4 mb-md-0 pl-sm-3 p-md-0 col-sm-6 col-md-3">
+                <div class="media">
+                  <i class="far fa-smile-wink icon-18 mr-2"></i>
+                  <div class="media-body">
+                    <p class="data-number m-0 font-weight-bold">9+</p>
+                    <p class="m-0 text-uppercase">Positive Feedbacks</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<h1>Gallery</h1>
+<section id="galleryContainer" class="gallery-container">
+  <ul id="gallery" class="gallery">
+    <li class="gallery__item">
+      <figure>
+        <img src="https://images.unsplash.com/photo-1517837817850-607cd9ff1015?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="">
+        <figcaption>Something New</figcaption>
+      </figure>
+    </li>
+    <li class="gallery__item">
+      <figure>
+        <img src="https://images.unsplash.com/photo-1601387434127-20979856e76e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="">
+        <figcaption>Long Day</figcaption>
+      </figure>
+    </li>
+    <li class="gallery__item">
+      <figure>
+        <img src="https://images.unsplash.com/photo-1504151864552-57020b6b876b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80" alt="">
+        <figcaption>The Arch</figcaption>
+      </figure>
+    </li>
+    <li class="gallery__item">
+      <figure>
+        <img src="https://images.unsplash.com/photo-1646980241033-cd7abda2ee88?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="">
+        <figcaption>Canopy Palace</figcaption>
+      </figure>
+    </li>
+    <li class="gallery__item">
+      <figure>
+        <img src="https://images.unsplash.com/photo-1575467678930-c7acd65d6470?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="">
+        <figcaption>Office Space</figcaption>
+      </figure>
+    </li>
+    <li class="gallery__item">
+      <figure>
+        <img src="https://images.unsplash.com/photo-1589169011402-8b2cbd1ee593?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1221&q=80" alt="">
+        <figcaption>Reach for the Sky</figcaption>
+      </figure>
+    </li>
+    <li class="gallery__item">
+      <figure>
+        <img src="https://images.unsplash.com/photo-1476703993599-0035a21b17a9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="">
+        <figcaption>Sunday Morning</figcaption>
+      </figure>
+    </li>
+    <li class="gallery__item">
+      <figure>
+        <img src="https://images.unsplash.com/photo-1605522508768-f8697d6e8e24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80" alt="">
+        <figcaption>Main Street</figcaption>
+      </figure>
+    </li>
+
+
+  </ul>
+
+</section>
+</body>
+<script th:src="@{~/js/script.js}"></script>
+
+<script>
+  let gallery = document.querySelector('#gallery')
+  let wrapper = document.querySelector('#galleryContainer')
+  let moveGallery = 0;
+
+  let dragging = false, mouseLocation, galleryLocation;
+
+  const easeOutQuad = t => {
+    return 1 - (1 - t) * (1 - t);
+  }
+
+  moveGallery = () => {
+    moveVal = easeOutQuad(window.scrollY * -0.00420);
+    gallery.style.transform = `rotateZ(-5deg) translateX(${moveVal}%)`
+
+    requestAnimationFrame(moveGallery);
+  }
+
+  requestAnimationFrame(moveGallery);
+
+  const dragStart = e => {
+    dragging = true;
+    mouseLocation = e.pageX;
+    galleryLocation = wrapper.scrollLeft;
+  }
+
+  const dragActive = e => {
+    if(!dragging) return;
+
+    let offset = e.pageX - mouseLocation;
+    wrapper.scrollLeft = galleryLocation - offset;
+  }
+
+  const dragStop = e => {
+    dragging = false;
+    mouseLocation = e.pageX;
+    galleryLocation = wrapper.scrollLeft;
+  }
+
+  gallery.addEventListener('mousedown', dragStart);
+  gallery.addEventListener('mousemove', dragActive);
+  gallery.addEventListener('mouseup', dragStop);
+</script>
+</html>

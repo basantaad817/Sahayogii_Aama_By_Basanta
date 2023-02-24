@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aama register</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+    <!--<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>-->
+    <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>-->
+</head>
+<body>
+<form th:method="post" th:action="@{/admin/saveaama}" th:object="${aamacreate}"  enctype="multipart/form-data">
+    <input type="text" class="form-control is-valid" hidden="hidden" th:field="*{id}" th:value="${aamacreate.id}">
+    <div class="form-row">
+        <div class="col-md-4 mb-3">
+            <label for="validationServer01">First name</label>
+            <input type="text" class="form-control is-valid" id="validationServer01" placeholder="First name" required
+                   th:field="*{firstname}">
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label for="validationServer02">Last name</label>
+            <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Last name" required
+                   th:field="*{lastname}">
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label for="validationServerUsername">Email Address</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroupPrepend3">@</span>
+                </div>
+                <input type="text" class="form-control is-valid" id="validationServerEmail" placeholder="Email Address"
+                       aria-describedby="inputGroupPrepend3" required th:field="*{email}">
+                <div class="invalid-feedback">
+                    Please give an email address.
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="form-row">
+        <div class="col-md-4 mb-3">
+            <label for="validationServer02">Location</label>
+            <input type="text" class="form-control is-valid" id="validationServer02"
+                   placeholder="City" required th:field="*{location}">
+            <div class="invalid-feedback">
+                Please provide a valid city.
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label for="validationServer03">Expericence</label>
+            <input type="number" class="form-control is-valid" id="validationServer03" placeholder="Years in work"
+                   required th:field="*{experience}">
+            <div class="invalid-feedback">
+                Please provide a valid input.
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <label for="validationServer02">Location</label>
+            <input type="text" class="form-control is-valid" id="validationServer04"
+                   placeholder="City" required th:field="*{phoneNo}">
+            <div class="invalid-feedback">
+                Please provide a valid city.
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <label for="validationServer04">Known For?</label>
+            <input type="text" class="form-control is-valid" id="validationServer05" placeholder="What is she good at?"
+                   required th:field="*{knownfor}">
+            <div class="invalid-feedback">
+                Please provide a valid information.
+            </div>
+        </div>
+
+
+    </div>
+
+<!--    <div class="form-row">-->
+        <div class="col-md-3 mb-3">
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="validatedCustomFile" name="image" accept="image/*"  required>
+                <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                <div class="invalid-feedback">
+                    Please select image file
+                </div>
+            </div>
+        </div>
+
+<!--        <div class="form-group">-->
+<!--            <div class="form-check">-->
+<!--                <input class="form-check-input is-valid" type="checkbox" value="" id="invalidCheck3">-->
+<!--                <label class="form-check-label" for="invalidCheck3">-->
+<!--                    Has she received any training?-->
+<!--                </label>-->
+
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="form-group">-->
+<!--            <div class="form-check">-->
+<!--                <input class="form-check-input is-valid" type="checkbox" value="" id="invalidCheck3">-->
+<!--                <label class="form-check-label" for="invalidCheck3">-->
+<!--                    Does she own any vechicle?-->
+<!--                </label>-->
+
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+
+
+    <button class="btn btn-primary" type="submit">Submit form</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+      name="viewport"
+    />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+    <title>Sahayogi Aama Login</title>
+    <link
+      crossorigin="anonymous"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      rel="stylesheet"
+    />
+    <link th:href="@{~/css/login.css}" rel="stylesheet" />  </head>
+  <body>
+    <div
+      class="d-flex align-items-center flex-column justify-content-center h-100 text-dark"
+      id="header"
+    >
+      <div class="row" id="loginForm">
+        <div class="col-md-6 col-sm-12 text" id="right">
+          <h2>Log into account</h2>
+          <small class="mb-3"
+            ><code style="font-size: 78.5% !important"
+              >Use your credentials to access your account</code
+            ></small
+          >
+          <form action=""  th:action="@{/login}" method="post">
+            <div class="form-group mt-3">
+              <code
+                for="exampleInputEmail1"
+                style="
+                  background: #e61c58;
+                  padding: 5px;
+                  color: white !important;
+                "
+                >Email address</code
+              >
+              <input
+                aria-describedby="emailHelp"
+                class="form-control"
+                id="exampleInputEmail1"
+                placeholder="Enter email"
+                type="email"
+                name="email"
+                required
+              />
+              <small class="form-text text-muted" id="emailHelp"
+                >Please enter your e-mail address above.</small
+              >
+            </div>
+            <div class="form-group">
+              <code
+                for="exampleInputPassword1"
+                style="
+                  background: #e61c58;
+                  padding: 5px;
+                  color: white !important;
+                "
+                >Password</code
+              >
+              <input
+                class="form-control"
+                id="exampleInputPassword1"
+                placeholder="Password"
+                required
+                type="password"
+                name="password"
+              />
+              <small class="form-text text-muted" id="passwordHelp"
+                >Please enter your password address above.</small
+              >
+            </div>
+            <div class="row">
+                    <div class="col-md-12">
+                        <p>Don't have an account? <a th:href="@{~/user/register}">Register</a></p>
+                    </div>
+                </div>
+            <button class="btn btn-primary" type="submit">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+</html>

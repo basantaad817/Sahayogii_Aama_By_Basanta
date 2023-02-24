@@ -1,0 +1,15 @@
+<div th:fragment="adminfrag">
+  <ul class="menu">
+
+    <h1><img src="https://images.unsplash.com/photo-1533128361669-69c065857a13?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=436&q=80https://images.unsplash.com/photo-1533128361669-69c065857a13?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=436&q=80" alt="" width="40" style="border-radius: 10px;margin-left: 8px;margin-top: 1rem;"> </h1>
+    <b class="b">ADMIN</b>
+    <i class="i">Space</i>
+    <hr>
+    <div class="text"id="tabs-nav" >
+      <li class="item secList"><a th:href="@{~/admin/aamacreate}"><i class="fas fa-home"></i>Add Aama</a></li>
+      <li class="item secList"><a th:href="@{~/admin/dashboard}" ><i class="fas fa-chart-line"></i>Aama List</a></li>
+      <li class="item secList"><a th:href="@{~/admin/listofhiring}" class="active"><i class="fas fa-chart-line"></i>Request</a></li></div>
+      <li class="item secList"><a th:href="@{~/logout}" class="active"><i class="fas fa-chart-line"></i>Logout</a></li></div>
+  </ul>
+
+</div>

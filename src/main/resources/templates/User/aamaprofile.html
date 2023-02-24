@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aama Profile</title>
+    <link rel="stylesheet" th:href="@{~/css/aamaprofile.css}">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" th:href="@{~/css/style.css}">
+</head>
+<body>
+<div th:replace="Frag/UserFrag.html :: Userfrag"></div>
+
+    <section id="body">
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title" th:text="${aamadata.firstname}"></h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <img th:src="'data:image/png;base64,'+${aamadata.imageBase64}" class="aamapic">
+                     
+
+                    <div class=" col-md-9 col-lg-9 ">
+                        <table class="table table-user-information">
+                            <tbody>
+                                <tr>
+                                    <td>Known For</td>
+                                    <td th:text="${aamadata.knownfor}"></td>
+                                </tr>
+                                <tr>
+                                    <td>Contact Number</td>
+                                    <td th:text="${aamadata.phoneNo}"></td>
+                                </tr>
+                                <tr>
+                                    <td>Date of Birth</td>
+                                    <td>08/25/2040</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>Gender</td>
+                                    <td>Female</td>
+                                </tr>
+                                <tr>
+                                    <td>Home Address</td>
+                                    <td th:text="${aamadata.location}"></td>
+                                </tr>
+                                <tr>
+                                    <td>Experience in Year</td>
+                                    <td th:text="${aamadata.experience}"></td>
+                                </tr>
+                                <tr>
+                                    <td>Email</td>
+                                    <td><a href="mailto:info@aamakonam.com" th:text="${aamadata.email}"></a></td>
+                                </tr>
+
+                                <tr>
+                                <td>Has she received any trainings?</td>
+                                <td>No</td>
+                                </tr>
+                                
+                               
+                                <tr>
+                                <td>Does she own any vechicle</td>
+                                <td>No</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="mwb-form-main-wrapper">
+            <div class="mwb-form-main-container">
+                <h1>Hire Aama</h1>
+                <form th:method="post" th:action="@{/user/savehire}" th:object="${hire}">
+                    <input type="num" class="mwb-form-control" hidden="hidden" name="user_id" th:value="${info.id}" >
+                    <input type="num" class="mwb-form-control" hidden="hidden" name="aama_id" th:value="${aamainfo.id}" >
+
+                    <div class="mwb-form-group">
+                        <input type="text" class="mwb-form-control" readonly th:value="${info.fullname}" id="name">
+                        <label for="name" class="mwb-form-text-label"></label>
+                        <div class="mwb-form-error">This Field Required*</div>
+                    </div>
+                    <div class="mwb-form-group">
+                        <input type="email" class="mwb-form-control" readonly id="email" th:value="${info.email}">
+                        <label for="email" class="mwb-form-text-label"></label>
+                        <div class="mwb-form-error">This Field Required*</div>
+                    </div>
+                    <div class="mwb-form-group">
+                        <input type="tel" class="mwb-form-control" readonly id="phonenumber" th:value="${info.phoneNo}">
+                        <label for="phonenumber" class="mwb-form-text-label"></label>
+                        <div class="mwb-form-error">This Field Required*</div>
+                    </div>
+                    <div class="mwb-form-group">
+                        <input type="text" class="mwb-form-control"  id="location" placeholder="Your Location*" th:field="*{location}">
+                        <label for="location" class="mwb-form-text-label"></label>
+                        <div class="mwb-form-error">This Field Required*</div>
+                    </div>
+                    <div class="mwb-form-group">
+                        <input type="number" class="mwb-form-control" id="salary" placeholder="How much are you willing to pay?*" th:field="*{payment}">
+                        <label for="salary" class="mwb-form-text-label"></label>
+                        <div class="mwb-form-error">This Field Required*</div>
+                    </div>
+
+                    <div class="mwb-form-group">
+                        <textarea name="" cols="30" rows="4" id="msg" class="mwb-form-control" placeholder="Describe the work" th:field="*{description}"></textarea>
+                        <label for="msg" class="mwb-form-text-label"></label>
+                        <div class="mwb-form-error">This Field Required*</div>
+                    </div>
+                    <div class="mwb-form-group">
+                        <input type="submit" class="mwb-form-submit-btn" value="Send">
+                    </div>
+                </form>
+            </div>
+        </div>
+<!--        <a class="btn btn-primary" th:href="@{~/user/appledhiring/}+${info.id}">Application</a>-->
+
+    </section>
+
+
+
+
+</body>
+<script th:src="@{~/js/script.js}"></script>
+
+</html>

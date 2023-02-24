@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Features</title>
+  <link rel="stylesheet" th:href="@{~/css/features.css}" />
+  <link rel="stylesheet" th:href="@{~/css/style.css}">
+</head>
+<body>
+<div th:replace="Frag/UserFrag.html :: Userfrag"></div>
+<section>
+  <div class="container">
+    <div class="circles"></div>
+    <div class="details-container">
+      <div class="avatar">
+        <img src="https://www.maidwale.com/images/service/baby-hygiene1-_1_.webp" class="img-fluid" alt="" />
+      </div>
+      <div class="about">
+        <div class="name">
+          <p>Hello There!</p>
+          <h1>Explore Our Features</h1>
+        </div>
+        <div class="about-content">
+          <p>
+            Introducing the innovative features of our platform that are designed to simplify the process of connecting caretakers and users in need of care services. Our system is designed to provide a seamless user experience with its easy-to-use features that cater to the unique needs of both caretakers and users.  Whether you are a caretaker looking to expand your services or a user seeking quality care, our platform has everything you need to get started. Join our community today and experience the convenience and comfort of our user-centric care platform.
+          </p>
+          <p><a href="./all-aama.html">See all आमा</a></p>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="skills-container">
+      <button>Where</button>
+      <button>LOVE & CARE</button>
+      <button>Meets</button>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="drybn-features">
+    <div class="drybn-features__overlay">
+      <div class="drybn-features__content">
+        <div class="features-heading">
+          <h2>Feature List</h2>
+        </div>
+        <div class="features-list">
+          <div class="feature-item feature-item--1">
+            <div class="item-icon">
+              <img
+                      th:src="@{~/image/fe-onlinereg.png}"
+              />
+            </div>
+            <h3 class="item-title">Online registration for Aama services</h3>
+            <p class="item-description">
+              A simple and efficient way for eligible Aama to register for the program online, including the ability to upload necessary documents and information from Admin dashboard.
+            </p>
+          </div>
+
+
+
+          <div class="feature-item feature-item--1">
+            <div class="item-icon">
+              <img
+                      th:src="@{~/image/fe-compre.png}"
+              />
+            </div>
+            <h3 class="item-title">Comprehensive eligibility screening </h3>
+            <p class="item-description">
+              A robust screening process that ensures only eligible Aama are accepted into the program, helping to ensure fairness and efficiency in service delivery.
+            </p>
+          </div>
+
+          <div class="feature-item feature-item--1">
+            <div class="item-icon">
+              <img
+                      th:src="@{~/image/fe-appointment.png}"
+              />
+            </div>
+            <h3 class="item-title">Appointment scheduling system</h3>
+            <p class="item-description">
+              A streamlined process for Aama to schedule appointments with relevant service providers, including reminders and notifications for upcoming appointments.
+            </p>
+          </div>
+
+          <div class="feature-item feature-item--1">
+            <div class="item-icon">
+              <img
+                      th:src="@{~/image/fe-userinterface.png}"
+              />
+            </div>
+            <h3 class="item-title"> User-friendly interface </h3>
+            <p class="item-description">
+              An intuitive and easy-to-use website design that makes it simple for Aama and service providers to navigate the site and access the information.
+            </p>
+          </div>
+          <div class="feature-item feature-item--1">
+            <div class="item-icon">
+              <img
+                      th:src="@{~/image/fe-dashboard.png}"
+              />
+            </div>
+            <h3 class="item-title"> Aama profile dashboard </h3>
+            <p class="item-description">
+              Each Aama has a personalized profile. This provides transparency and helps Aama to know more about Aama.
+            </p>
+          </div>
+          <div class="feature-item feature-item--1">
+            <div class="item-icon">
+              <img
+                      th:src="@{~/image/fe-datamanagement.png}"
+              />
+            </div>
+            <h3 class="item-title"> Secure data management </h3>
+            <p class="item-description">
+              A secure database that protects Aama's personal information and ensures compliance with privacy regulations.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+<script th:src="@{~/js/script.js}"></script>
+
+</html>

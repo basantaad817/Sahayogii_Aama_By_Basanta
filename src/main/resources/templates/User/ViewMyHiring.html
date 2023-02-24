@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"/>
+  <link rel="stylesheet" th:href="@{~/css/tablestyle.css}">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+
+<table id="table_id" class="display" style="width:100%">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Fullname</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Aama_name</th>
+    <th>Aama_ID</th>
+    <th>Aama_Num</th>
+    <th>Description</th>
+    <th>Payment</th>
+    <th>Location</th>
+    <th>Delete</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="hire:${myhiring}">
+    <td th:text="${hire.id}"></td>
+    <td th:text="${hire.getUser_id().fullname}"></td>
+    <td th:text="${hire.getUser_id().email}"></td>
+    <td th:text="${hire.getUser_id().phoneNo}"></td>
+    <td th:text="${hire.getAama_id().firstname}"></td>
+    <td th:text="${hire.getAama_id().id}"></td>
+    <td th:text="${hire.getAama_id().phoneNo}"></td>
+    <td th:text="${hire.description}"></td>
+    <td th:text="${hire.payment}"></td>
+    <td th:text="${hire.location}"></td>
+    <td> <a class="edit" th:href="@{~/user/deletehi/}+${hire.id}" >Delete</a></td>
+
+  </tr>
+  </td>
+  </tbody>
+</table>
+<script
+        type="text/javascript"
+        charset="utf8"
+        src="https://code.jquery.com/jquery-3.3.1.js"
+></script>
+<script
+        type="text/javascript"
+        charset="utf8"
+        src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"
+></script>
+</body>
+<script th:src="@{~/js/script.js}"></script>
+</html>

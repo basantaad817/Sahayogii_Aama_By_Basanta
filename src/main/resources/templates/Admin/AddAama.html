@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{~/css/admindashboard.css}">
+    <link rel="stylesheet" th:href="@{~/css/AddAama.css}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div th:replace="Frag/AdminFrag.html :: adminfrag"></div>
+
+<br>
+
+<h1 style="text-transform: uppercase;" class="h">Welcome admin 👋</h1>
+<br>
+
+
+
+
+<div class="wrapper">
+    <div class="profile">
+        <div class="content">
+            <h1>Edit Profile</h1>
+            <form th:method="post" th:action="@{/admin/saveaama}" th:object="${aamacreate}"  enctype="multipart/form-data">
+                <input type="text" class="form-control is-valid" hidden="hidden" th:field="*{id}" th:value="${aamacreate.id}">
+                <!-- Photo -->
+                <fieldset>
+                    <div class="grid-35">
+                        <label for="avatar">Your Photo</label>
+                    </div>
+                    <div class="grid-65">
+                        <span class="photo" title="Upload your Avatar!"></span>
+                        <input type="file" class="btn"  name="image" accept="image/*" />
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="grid-35">
+                        <label for="fname">First Name</label>
+                    </div>
+                    <div class="grid-65">
+                        <input type="text" id="fname" tabindex="1" th:field="*{firstname}"  th:value="${aamacreate.firstname}">
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="grid-35">
+                        <label for="lname">Last Name</label>
+                    </div>
+                    <div class="grid-65">
+                        <input type="text" id="lname" tabindex="2" th:field="*{lastname}"  th:value="${aamacreate.lastname}" />
+                    </div>
+                </fieldset>
+                <!-- Description about User -->
+                <!-- Location -->
+                <fieldset>
+                    <div class="grid-35">
+                        <label for="location">Location</label>
+                    </div>
+                    <div class="grid-65">
+                        <input type="text" id="location" tabindex="4" th:field="*{location}"  th:value="${aamacreate.location}" />
+                    </div>
+                </fieldset>
+
+                <!-- Email -->
+                <fieldset>
+                    <div class="grid-35">
+                        <label for="email">Email Address</label>
+                    </div>
+                    <div class="grid-65">
+                        <input type="email" id="email" tabindex="6" th:field="*{email}"  th:value="${aamacreate.email}"/>
+                    </div>
+                </fieldset>
+                <!-- Looking for Work -->
+
+                <!-- School -->
+                <fieldset>
+                    <div class="grid-35">
+                        <label for="school">Experiance</label>
+                    </div>
+                    <div class="grid-65">
+                        <input type="number" id="school" tabindex="9" th:field="*{experience}"  th:value="${aamacreate.experience}" />
+                    </div>
+                </fieldset>
+                <!-- Company Name -->
+                <fieldset>
+                    <div class="grid-35">
+                        <label for="company">Known For</label>
+                    </div>
+                    <div class="grid-65">
+                        <input type="text" id="company" tabindex="10" th:field="*{knownfor}"  th:value="${aamacreate.knownfor}" />
+                    </div>
+                </fieldset>
+                <!-- Job Position -->
+                <fieldset>
+                    <div class="grid-35">
+                        <label for="position">PhoneNo</label>
+                    </div>
+                    <div class="grid-65">
+                        <input type="text" id="position" tabindex="11" th:field="*{phoneNo}"  th:value="${aamacreate.phoneNo}" />
+                    </div>
+                </fieldset>
+
+
+                <fieldset>
+                    <input type="reset" class="Btn cancel" value="Cancel" />
+                    <input type="submit" class="Btn" value="Save Changes" />
+                </fieldset>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!-- http://www.smashingmagazine.com/2013/08/08/release-livestyle-css-live-reload/ -->
+
+
+</body>
+<script th:src="@{~/js/script.js}"></script>
+</html>

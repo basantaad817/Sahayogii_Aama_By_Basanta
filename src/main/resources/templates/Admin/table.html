@@ -1,0 +1,73 @@
+<html>
+<head>
+<link
+rel="stylesheet"
+type="text/css"
+href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"
+/>
+</head>
+<body>
+<table id="table_id" class="display" style="width:100%">
+<thead>
+<tr>
+<th>Name</th>
+<th>Department</th>
+<th>Place</th>
+<th>Contact No.</th>
+<th>DOJ</th>
+<th>Email</th>
+</tr>
+</thead>
+</table>
+<script
+type="text/javascript"
+charset="utf8"
+src="https://code.jquery.com/jquery-3.3.1.js"
+></script>
+<script
+type="text/javascript"
+charset="utf8"
+src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"
+></script>
+<script>
+$(document).ready(function() {
+$("#table_id").DataTable({
+"data": [
+[
+"Jack Williamson",
+"Analytics",
+"Florida",
+"7689764534",
+"2015/01/21",
+"jack.williamson@xyz.com"
+],
+[
+"Greer Marshall",
+"Finannce",
+"London",
+"8756456734",
+"2013/06/26",
+"greer.marshall@xyz.com"
+],
+[
+"Jennifer Davidson",
+"IT",
+"Mexico",
+"7854563456",
+"2008/11/10",
+"jennifer.davidson@xyz.com"
+],
+[
+"Rodrix Cox",
+"Accounts",
+"Tokyo",
+"8976549087",
+"2011/08/29",
+"rodrix.cox@xyz.com"
+]
+]
+});
+});
+</script>
+</body>
+</html>
