@@ -152,6 +152,27 @@ button:active {
   box-shadow: 1px 1px 10px 0px #22222280;
 }
 
+  .drybn-features{
+    margin-top: 4%
+  }
+
+.drybn-features__content .features-list{
+  margin: 0 3%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.drybn-features__content .feature-item{
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  width: 30%;
+}
+
+
+
 @media only screen and (max-width: 766px) {
   .container {
     height: auto;
@@ -200,29 +221,13 @@ button:active {
 
 
 
-.drybn-features{
-	margin-top: 4%
-}
+/*.drybn-features{*/
+/*	margin-top: 4%*/
+/*}*/
 .features-heading{
   text-align: center;
   text-transform: uppercase;
   font-size: 1.5rem;
-}
-
-.drybn-features__content .features-list{
-  max-width: 500px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.drybn-features__content .feature-item{
-  text-align: center;
-  padding: 1rem;
-  margin-bottom: 2rem;
-  width: 25%;
 }
 
 
@@ -258,11 +263,6 @@ button:active {
 .drybn-features__content .feature-item--1:hover  h3{
   color: var(--secondary);
 }
-
-
-
-
-
 .drybn-features__content .feature-item h3{
   font-size: 1.5rem;
   margin: 0 1rem;
@@ -276,16 +276,10 @@ button:active {
 /*
 **  MD BREAKPOINT
 */
-@media only screen and (min-width:960px){
-  .drybn-features__content .features-list{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 1200px;
+
+@media only screen and (max-width:500px){
+   .drybn-features__content .feature-item{
+    width: 100%;
   }
-  
-  .drybn-features__content .feature-item{
-    min-width: 30%;
-  }
-  
+
 }

@@ -1,5 +1,5 @@
 #body{
-    border: 4px solid yellow;
+    /*border: 4px solid yellow;*/
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -7,7 +7,7 @@
 }
 .panel{
     width: 50%;
-    border: 2px solid red;
+    /*border: 2px solid red;*/
     background-color: #c5d5ed;
 }
 h3{
