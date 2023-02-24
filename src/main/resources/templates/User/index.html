@@ -6,27 +6,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sahayogi aama</title>
   <link rel="stylesheet" th:href="@{~/css/style.css}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 <div th:replace="Frag/UserFrag.html :: Userfrag"></div>
 
-<div class="container-div-prt">
-  <div class="prt st">
-    <img th:src="@{~/image/home-image.gif}" draggable="false" alt="">
-  </div>
-  <div class="prt sd">
-    <div class="ris">
-      <h1>
+<section class="partt">
+<div class="home1">
+  <div class="left">
+        <h1>
         <span>Find </span><br> आमा <br> for your <br> child
       </h1>
       <button  onclick="location.href='#about'" class="btn"><img class="icon2" src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/icon2.png" alt=""> what's that</button>
-    </div>
+
+  </div>
+  <div class="right">
+    <img th:src="@{~/image/home-image.gif}" draggable="false" alt="">
   </div>
 </div>
+</section>
+<!--end of home part-->
 
-<!-- sections -->
-<section class="about" id="about" >
-  <div class="div fir">
+
+<!-- about us part started -->
+<section class="about partt" id="about" >
+  <div class="top">
     <h2>We provide caretaker for your child</h2>
     <p>
       Sahayogii आमा is a one-of-a-kind platform connecting new mothers in Nepal with experienced caretakers, providing them with the support and care they need for their
@@ -37,19 +41,16 @@
       See About Us
     </button>
   </div>
-  <div class="div howitworks">
+  <div class="howitworks">
     <img th:src="@{~/image/care.png}" draggable="false" alt="">
   </div>
 </section>
+<!--end of about part-->
 
+<!--start fo why part-->
 
-
-
-
-<section class="why">
-  <div class="container-div-why">
-    <div class="dr">
-      <div class="tw">
+<section class="why partt">
+    <div class="left">
         <h3>Why Sahayogi आमा?</h3>
         <p>
           Sahayogii आमा provides a solution to the problems new mothers face by connecting them with experienced caretakers,
@@ -62,15 +63,13 @@
           <img src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/icon2.png" class="icon2" alt="">
           Check our Features
         </button>
-      </div>
     </div>
-    <div class="dr">
-      <figure class="tw">
+    <div class="right">
         <img th:src="@{~/image/graphicsss.png}" draggable="false" alt="">
-      </figure>
     </div>
-  </div>
 </section>
+
+<!--end of why part-->
 
 <!--  <section class="cover">-->
 <!--    <div>-->
@@ -80,14 +79,14 @@
 <!--  </section>-->
 
 
+<!--start of available work part-->
 
-
-<section class="work">
-  <span>get started now</span>
+<section class="work partt">
+  <span>get आमा now</span>
 
   <section id="available-aama">
     <div class="individual-aama" th:each="aama:${aamaList}">
-      <img th:src="'data:image/png;base64,'+${aama.imageBase64}" width="200" height="300"/>
+      <img th:src="'data:image/png;base64,'+${aama.imageBase64}" />
       <h3 th:text="${aama.firstname}"></h3>
       <!--          <button class="btn" th:onclick="| window.location.href='/user/aamaprofile'+ |"><img src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/icon1.png" class="icon1" alt=""> Browse</button>-->
       <button class="btn"><a th:href="@{~/user/aamaprofile/}+${aama.id}" >Browse</a> </button>
@@ -120,33 +119,33 @@
 
 </section>
 
-<footer>
-  <div class="ftr-container">
-    <div class="fdb">
-      <img class="logo" th:src="@{~/image/logo_footer.png}" alt="">
+<footer class="partt">
+
+    <div class="insidefooter">
+      <img th:src="@{~/image/logo_footer.png}" alt="">
       <div>
-        <img src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/dribbble.png" alt="">
-        <img src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/Instagram.png" alt="">
-        <img src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/Twitter.png" alt="">
+        <a href="www.fb.com"><i class="fa-brands fa-facebook"></i></a>
+        <a href="www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
       </div>
     </div>
 
-    <div>
+    <div class="insidefooter">
       <h2>Office Location</h2>
       <h5>Purano Baneshwor</h5>
     </div>
 
-    <div>
+    <div class="insidefooter">
       <h2>Call on</h2>
       <h5>+977 9841123253</h5>
     </div>
 
-    <div>
+    <div class="insidefooter">
       <h2>Email at</h2>
-      <h5>info.sahayogiaama.com</h5>
+      <h5><a href="mailto:info.shayogiaama.com"></a>info.sahayogiaama.com</h5>
     </div>
   </div>
 </footer>
+
 </body>
 <script th:src="@{~/js/script.js}"></script>
 </html>

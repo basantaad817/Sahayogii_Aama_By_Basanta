@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>AdminDashboard</title>
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"/>
   <link rel="stylesheet" th:href="@{~/css/admindashboard.css}">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
@@ -30,6 +30,7 @@
 
 <!--<a th:href="@{~/admin/aamacreate}" style=" background-color: white;-->
 <!-- color: black; padding: 10px;border-radius: 20px;">Add Aama</a>-->
+
   <table id="table_id" class="display" style="width:100%">
     <thead>
     <tr>
@@ -46,7 +47,7 @@
       <th>Delete</th>
     </tr>
     </thead>
-    <tbody>
+    <tbody >
     <tr th:each="aama:${aamaList}">
       <td th:text="${aama.id}"></td>
       <td th:text="${aama.firstname}"></td>
@@ -64,6 +65,9 @@
     </td>
     </tbody>
   </table>
+
+
+
   <script
           type="text/javascript"
           charset="utf8"

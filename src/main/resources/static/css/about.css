@@ -32,15 +32,16 @@ p {
 img {
   max-width: 100%;
 }
-
+a{
+  text-decoration: none;
+}
 .about-section {
-  width: 90%;
+  width: 100%;
   background-color: var(--bg);
   min-height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 3px solid green;
 }
 .container-fluid{
   width: 50%;

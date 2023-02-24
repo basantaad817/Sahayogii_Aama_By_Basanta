@@ -1,6 +1,7 @@
 <div th:fragment="Userfrag">
 
     <nav>
+
         <ul>
             <li><a th:href="@{~/user/index}">home</a></li>
             <li><a th:href="@{~/user/aboutus}">about </a></li>
@@ -10,10 +11,11 @@
             <li><a th:href="@{~/user/profile}">profile</a> </li>
             <li><img onclick="msg()" src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/menu.png" draggable="false" alt=""></li>
         </ul>
+
         <div id="show">
             <div class="cont-mn">
                 <img class="cmn" th:src="@{~/image/logo.png}" alt="">
-                <img onclick="msg2()" class="close" src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/close.png" alt="">
+                <img onclick="msg2()" class="closee" src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/close.png" alt="">
             </div>
             <div class="links">
                 <div><a th:href="@{~/user/index}"> home </a><img src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/arrow.png" alt=""></div>
@@ -24,12 +26,10 @@
                 <div><a th:href="@{~/user/faq}"> FAQs </a><img src="https://raw.githubusercontent.com/arbiprog/casecraft/main/images/arrow.png" alt=""></div>
             </div>
         </div>
+
         <div class="logoo">
             <img th:src="@{~/image/logo.png}" draggable="false" alt="">
         </div>
+
     </nav>
-
-
-
-
 </div>

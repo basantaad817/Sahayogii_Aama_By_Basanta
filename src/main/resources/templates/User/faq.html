@@ -12,80 +12,58 @@
 <body>
 <div th:replace="Frag/UserFrag.html :: Userfrag"></div>
     <h1>FAQs</h1>
-
+<main>
     <div class="wrapper">
         <div class="container">
-            <div class="question">How do I verify my email?</div>
+            <div class="question">How does Sahayogii Aama work?</div>
             <div class="answercont">
                 <div class="answer">
-                    Click the link in the verification email from verify@codepen.io (be
-                    sure to check your spam folder or other email tabs if it's not in
-                    your inbox). Or, send an email with the subject "Verify" to
-                    verify@codepen.io from the email address you use for your CodePen
-                    account.<br /><br />
-
-                    <a
-                        href="https://blog.codepen.io/documentation/features/email-verification/#how-do-i-verify-my-email-2">How
-                        to Verify Email Docs</a>
+                    Users can register on our website, browse through the profiles of our caretakers, and select the one that best suits their needs. They can communicate with the caretaker directly and make arrangements for the services required.
                 </div>
             </div>
         </div>
 
         <div class="container">
             <div class="question">
-                My Pen loads infinitely or crashes the browser.
+                Who are the caretakers on Sahayogii Aama?
             </div>
             <div class="answercont">
                 <div class="answer">
-                    It's likely an infinite loop in JavaScript that we could not catch.
-                    To fix, add ?turn_off_js=true to the end of the URL (on any page,
-                    like the Pen or Project editor, your Profile page, or the Dashboard)
-                    to temporarily turn off JavaScript. When you're ready to run the
-                    JavaScript again, remove ?turn_off_js=true and refresh the page.<br /><br />
-
-                    <a href="https://blog.codepen.io/documentation/features/turn-off-javascript-in-previews/">How to
-                        Disable JavaScript Docs</a>
+                    Our caretakers are all women, specifically elderly women who have years of experience in caring for babies. They not only have the necessary skills to care for your baby, but they also provide the warmth and love that only a grandmother can offer.
                 </div>
             </div>
         </div>
 
         <div class="container">
-            <div class="question">How do I contact the creator of a Pen?</div>
+            <div class="question">What services do the caretakers provide?</div>
             <div class="answercont">
                 <div class="answer">
-                    You can leave a comment on any public Pen. Click the "Comments" link
-                    in the Pen editor view, or visit the Details page.<br /><br />
-
-                    <a href="https://blog.codepen.io/documentation/faq/how-do-i-contact-the-creator-of-a-pen/">How to
-                        Contact Creator of a Pen Docs</a>
+                    The caretakers provide baby care as well as household activities such as washing clothes, cooking food, and cleaning utensils. This helps mothers to focus on their own recovery and allows them to spend more time with their babies.
                 </div>
             </div>
         </div>
 
         <div class="container">
-            <div class="question">What version of [library] does CodePen use?</div>
+            <div class="question">How are the caretakers screened?</div>
             <div class="answercont">
                 <div class="answer">
-                    We have our current list of library versions
-                    <a href="https://codepen.io/versions">here</a>
+                    The caretakers registered on our system are carefully screened, and their profiles include detailed information about their experience, phone numbers, and photos. This allows users to make an informed decision when choosing a caretaker that best suits their needs.
                 </div>
             </div>
         </div>
 
         <div class="container">
-            <div class="question">What are forks?</div>
+            <div class="question">Is Sahayogii Aama only for new mothers?</div>
             <div class="answercont">
                 <div class="answer">
-                    A fork is a complete copy of a Pen or Project that you can save to
-                    your own account and modify. Your forked copy comes with everything
-                    the original author wrote, including all of the code and any
-                    dependencies.<br /><br />
-
-                    <a href="https://blog.codepen.io/documentation/features/forks/">Learn More About Forks</a>
+                    Yes, Sahayogii Aama is specifically designed to help new mothers in Nepal, who often struggle with caring for their newborns while recovering from childbirth.
                 </div>
             </div>
         </div>
     </div>
+
+
+</main>
 </body>
 <script th:src="@{~/js/faq.js}"></script>
 <script th:src="@{~/js/script.js}"></script>
